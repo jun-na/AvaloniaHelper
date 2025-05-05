@@ -8,7 +8,7 @@ namespace AvaloniaHelper.Converters;
 public class RadioButtonConverter : IValueConverter
 {
     // Enumからboolへの変換
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (value == null || parameter == null)
         {
@@ -18,7 +18,7 @@ public class RadioButtonConverter : IValueConverter
     }
 
     // boolからEnumへの変換
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (value == null || parameter == null) return 0;
         if ((bool)value && parameter != null)
